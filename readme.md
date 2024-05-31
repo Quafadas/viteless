@@ -4,17 +4,16 @@ An example of using an experimental scala JS live server implementation.
 
 It is assumed, that scala-clia, coursier and just are installed, and that
 
-`scala-cli --version` ,  `cs version` and `just --version` prints something reasonable. Use scala-cli 1.3.2+ for the best experience.
+`scala-cli --version` ,  `cs version` prints something reasonable. Use scala-cli 1.3.2+ for the best experience.
 
 ## TL;DR
 
 ```sh
 scala-cli --version && /
 cs version && /
-just --version && /
 git clone https://github.com/Quafadas/viteless.git && /
 cd viteless && /
-just dev
+cs launch io.github.quafadas:live-server-scala-cli-js_3:0.0.19
 ```
 
 ## Usage

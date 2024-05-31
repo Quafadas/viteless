@@ -28,8 +28,7 @@ def app =
       s"Hello ",
       child.text <-- hiVar.signal
     ),
-    pre("just dev"),
-    p("And This page should reload on change. Check the justfile..."),
+    p("This page should reload on change. Check the justfile... for the command to run the server."),
     // https://demo.laminar.dev/app/form/controlled-inputs
     input(
       typ := "text",
