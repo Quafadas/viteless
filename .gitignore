@@ -1,0 +1,5 @@
+*.semanticdb
+.bsp
+.scala-build
+.metals
+.DS_Store
