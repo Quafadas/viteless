@@ -9,10 +9,10 @@ It is assumed, that scala-clia, coursier and just are installed, and that
 ## TL;DR
 
 ```sh
-scala-cli --version && /
-cs version && /
-git clone https://github.com/Quafadas/viteless.git && /
-cd viteless && /
+scala-cli --version && \
+cs version && \
+git clone https://github.com/Quafadas/viteless.git && \
+cd viteless && \
 cs launch io.github.quafadas:live-server-scala-cli-js_3:0.0.21
 ```
 
