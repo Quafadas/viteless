@@ -7,6 +7,7 @@
 //> using jsModuleKind es
 //> using jsModuleSplitStyleStr smallmodulesfor
 //> using jsSmallModuleForPackage webapp
+//> using jsEmitSourceMaps true
 
 package webapp
 
