@@ -13,7 +13,7 @@ scala-cli --version && \
 cs version && \
 git clone https://github.com/Quafadas/viteless.git && \
 cd viteless && \
-cs launch io.github.quafadas:live-server-scala-cli-js_3:0.1.0
+cs launch io.github.quafadas:live-server-scala-cli-js_3:0.1.1
 ```
 
 ## Usage
