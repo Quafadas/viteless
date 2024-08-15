@@ -3,7 +3,7 @@
 
 //> using dep org.scala-js::scalajs-dom::2.8.0
 //> using dep com.raquo::laminar::17.0.0
-//> using dep io.github.quafadas::dedav_laminar::0.9.2
+//> using dep io.github.quafadas::dedav_laminar::0.9.2-1-05a8a88-20240725T191744Z-SNAPSHOT
 
 //> using jsEmitSourceMaps true
 //> using jsModuleKind es
@@ -21,6 +21,7 @@ import viz.vega.plots.PieChart
 import viz.vega.plots.doNothing
 import viz.vega.plots.PieChartLite
 import viz.LaminarViz
+import viz.vega.facades.EmbedOptions
 
 @main
 def main: Unit =
@@ -49,10 +50,14 @@ def app =
       width := "50vmin",
       height := "50vmin",
       LaminarViz.simpleEmbed(
-        PieChartLite(
+        PieChart(
           List(
             viz.Utils.fillDiv,
+            spec => spec("marks")(0)("name") = "piedy"
           )
+        ),
+        embedOpt = Some(
+          EmbedOptions( renderer = "svg" )
         )
       )
     ),
