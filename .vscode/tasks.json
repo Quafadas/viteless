@@ -1,0 +1,16 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "run",
+      "runOptions": {
+        "runOn": "folderOpen"
+      },
+      "command": "cs launch --contrib sjsls",
+      "problemMatcher": [],
+      "group": {
+        "kind": "build"
+      }
+    }
+  ]
+}
