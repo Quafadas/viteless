@@ -1,4 +1,4 @@
-## TL;DR
+# TL;DR
 
 1. copy and paste in terminal.
 
@@ -12,7 +12,6 @@ cs launch --contrib sjsls
 2. Edit hello.scala - observe live reload.
 
 
-An example of using an experimental scala JS live server implementation.
 
 ## Prerequisites
 
