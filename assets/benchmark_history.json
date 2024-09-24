@@ -1,0 +1,536 @@
+[
+  {
+    "benchmark": "vecxt.benchmark.DgemmBenchmark.java_dgemm",
+    "score": 8619.293601669751,
+    "params": null,
+    "scoreInterval": [8399.14500549159, 8839.442197847913],
+    "scoreUnit": "ops/s",
+    "branch": "main",
+    "date": "20240917",
+    "commit": "6efb42c",
+    "host": "gha"
+  },
+  {
+    "benchmark": "vecxt.benchmark.DgemmBenchmark.vecxt_mmult",
+    "score": 8804.164838372197,
+    "params": null,
+    "scoreInterval": [8422.199092781137, 9186.130583963257],
+    "scoreUnit": "ops/s",
+    "branch": "main",
+    "date": "20240917",
+    "commit": "6efb42c",
+    "host": "gha"
+  },
+  {
+    "benchmark": "vecxt.benchmark.AddScalarBenchmark.vecxt_add",
+    "score": 138388003.8953686,
+    "params": {
+      "n": "10"
+    },
+    "scoreInterval": [129012901.97553267, 147763105.81520453],
+    "scoreUnit": "ops/s",
+    "branch": "main",
+    "date": "20240923",
+    "commit": "b00d1b3",
+    "host": "gha"
+  },
+  {
+    "benchmark": "vecxt.benchmark.AddScalarBenchmark.vecxt_add",
+    "score": 11951013.609552557,
+    "params": {
+      "n": "1000"
+    },
+    "scoreInterval": [10426480.145582752, 13475547.073522361],
+    "scoreUnit": "ops/s",
+    "branch": "main",
+    "date": "20240923",
+    "commit": "b00d1b3",
+    "host": "gha"
+  },
+  {
+    "benchmark": "vecxt.benchmark.AddScalarBenchmark.vecxt_add",
+    "score": 86528.40952324326,
+    "params": {
+      "n": "100000"
+    },
+    "scoreInterval": [-16250.177538185904, 189306.99658467242],
+    "scoreUnit": "ops/s",
+    "branch": "main",
+    "date": "20240923",
+    "commit": "b00d1b3",
+    "host": "gha"
+  },
+  {
+    "benchmark": "vecxt.benchmark.AddScalarBenchmark.vecxt_add_vec",
+    "score": 225547582.14842042,
+    "params": {
+      "n": "10"
+    },
+    "scoreInterval": [215117152.75041923, 235978011.54642162],
+    "scoreUnit": "ops/s",
+    "branch": "main",
+    "date": "20240923",
+    "commit": "b00d1b3",
+    "host": "gha"
+  },
+  {
+    "benchmark": "vecxt.benchmark.AddScalarBenchmark.vecxt_add_vec",
+    "score": 11346403.371806012,
+    "params": {
+      "n": "1000"
+    },
+    "scoreInterval": [9359940.045133062, 13332866.698478963],
+    "scoreUnit": "ops/s",
+    "branch": "main",
+    "date": "20240923",
+    "commit": "b00d1b3",
+    "host": "gha"
+  },
+  {
+    "benchmark": "vecxt.benchmark.AddScalarBenchmark.vecxt_add_vec",
+    "score": 69313.47894141004,
+    "params": {
+      "n": "100000"
+    },
+    "scoreInterval": [63774.94558068164, 74852.01230213844],
+    "scoreUnit": "ops/s",
+    "branch": "main",
+    "date": "20240923",
+    "commit": "b00d1b3",
+    "host": "gha"
+  },
+  {
+    "benchmark": "vecxt.benchmark.DgemmBenchmark.java_dgemm",
+    "score": 8348.085943308999,
+    "params": null,
+    "scoreInterval": [5720.613194227123, 10975.558692390874],
+    "scoreUnit": "ops/s",
+    "branch": "main",
+    "date": "20240923",
+    "commit": "b00d1b3",
+    "host": "gha"
+  },
+  {
+    "benchmark": "vecxt.benchmark.DgemmBenchmark.vecxt_mmult",
+    "score": 8680.65517196811,
+    "params": null,
+    "scoreInterval": [8153.384024552092, 9207.926319384127],
+    "scoreUnit": "ops/s",
+    "branch": "main",
+    "date": "20240923",
+    "commit": "b00d1b3",
+    "host": "gha"
+  },
+  {
+    "benchmark": "vecxt.benchmark.IncrementBenchmark.increment_normal",
+    "score": 223954018.13702917,
+    "params": {
+      "len": "3"
+    },
+    "scoreInterval": [221846046.35633966, 226061989.91771868],
+    "scoreUnit": "ops/s",
+    "branch": "main",
+    "date": "20240923",
+    "commit": "b00d1b3",
+    "host": "gha"
+  },
+  {
+    "benchmark": "vecxt.benchmark.IncrementBenchmark.increment_normal",
+    "score": 15114949.56905401,
+    "params": {
+      "len": "100"
+    },
+    "scoreInterval": [14052191.257333139, 16177707.88077488],
+    "scoreUnit": "ops/s",
+    "branch": "main",
+    "date": "20240923",
+    "commit": "b00d1b3",
+    "host": "gha"
+  },
+  {
+    "benchmark": "vecxt.benchmark.IncrementBenchmark.increment_normal",
+    "score": 11667.135385459536,
+    "params": {
+      "len": "100000"
+    },
+    "scoreInterval": [11192.96644219131, 12141.304328727763],
+    "scoreUnit": "ops/s",
+    "branch": "main",
+    "date": "20240923",
+    "commit": "b00d1b3",
+    "host": "gha"
+  },
+  {
+    "benchmark": "vecxt.benchmark.IncrementBenchmark.increment_vec",
+    "score": 188180365.3867774,
+    "params": {
+      "len": "3"
+    },
+    "scoreInterval": [181907564.65916267, 194453166.11439213],
+    "scoreUnit": "ops/s",
+    "branch": "main",
+    "date": "20240923",
+    "commit": "b00d1b3",
+    "host": "gha"
+  },
+  {
+    "benchmark": "vecxt.benchmark.IncrementBenchmark.increment_vec",
+    "score": 19339585.79202112,
+    "params": {
+      "len": "100"
+    },
+    "scoreInterval": [14652777.48564089, 24026394.098401353],
+    "scoreUnit": "ops/s",
+    "branch": "main",
+    "date": "20240923",
+    "commit": "b00d1b3",
+    "host": "gha"
+  },
+  {
+    "benchmark": "vecxt.benchmark.IncrementBenchmark.increment_vec",
+    "score": 13153.581259859617,
+    "params": {
+      "len": "100000"
+    },
+    "scoreInterval": [11843.904145848453, 14463.25837387078],
+    "scoreUnit": "ops/s",
+    "branch": "main",
+    "date": "20240923",
+    "commit": "b00d1b3",
+    "host": "gha"
+  },
+  {
+    "benchmark": "vecxt.benchmark.SumBenchmark.sum_loop",
+    "score": 451117596.67177653,
+    "params": {
+      "len": "3"
+    },
+    "scoreInterval": [424809715.82348484, 477425477.5200682],
+    "scoreUnit": "ops/s",
+    "branch": "main",
+    "date": "20240923",
+    "commit": "b00d1b3",
+    "host": "gha"
+  },
+  {
+    "benchmark": "vecxt.benchmark.SumBenchmark.sum_loop",
+    "score": 22731808.03572442,
+    "params": {
+      "len": "100"
+    },
+    "scoreInterval": [21744950.896352325, 23718665.175096516],
+    "scoreUnit": "ops/s",
+    "branch": "main",
+    "date": "20240923",
+    "commit": "b00d1b3",
+    "host": "gha"
+  },
+  {
+    "benchmark": "vecxt.benchmark.SumBenchmark.sum_loop",
+    "score": 10673.447655530179,
+    "params": {
+      "len": "100000"
+    },
+    "scoreInterval": [10598.849402904616, 10748.045908155742],
+    "scoreUnit": "ops/s",
+    "branch": "main",
+    "date": "20240923",
+    "commit": "b00d1b3",
+    "host": "gha"
+  },
+  {
+    "benchmark": "vecxt.benchmark.SumBenchmark.sum_vec",
+    "score": 452471365.3796916,
+    "params": {
+      "len": "3"
+    },
+    "scoreInterval": [448038388.2437423, 456904342.5156409],
+    "scoreUnit": "ops/s",
+    "branch": "main",
+    "date": "20240923",
+    "commit": "b00d1b3",
+    "host": "gha"
+  },
+  {
+    "benchmark": "vecxt.benchmark.SumBenchmark.sum_vec",
+    "score": 40016780.33983904,
+    "params": {
+      "len": "100"
+    },
+    "scoreInterval": [38399796.126097076, 41633764.55358101],
+    "scoreUnit": "ops/s",
+    "branch": "main",
+    "date": "20240923",
+    "commit": "b00d1b3",
+    "host": "gha"
+  },
+  {
+    "benchmark": "vecxt.benchmark.SumBenchmark.sum_vec",
+    "score": 39505.99593499847,
+    "params": {
+      "len": "100000"
+    },
+    "scoreInterval": [38568.54119493152, 40443.450675065425],
+    "scoreUnit": "ops/s",
+    "branch": "main",
+    "date": "20240923",
+    "commit": "b00d1b3",
+    "host": "gha"
+  },
+  {
+    "benchmark": "vecxt.benchmark.SumBenchmark.sum_vec_alt",
+    "score": 500671903.4009518,
+    "params": {
+      "len": "3"
+    },
+    "scoreInterval": [487801649.0355126, 513542157.766391],
+    "scoreUnit": "ops/s",
+    "branch": "main",
+    "date": "20240923",
+    "commit": "b00d1b3",
+    "host": "gha"
+  },
+  {
+    "benchmark": "vecxt.benchmark.SumBenchmark.sum_vec_alt",
+    "score": 105812459.15042877,
+    "params": {
+      "len": "100"
+    },
+    "scoreInterval": [102846754.90317407, 108778163.39768347],
+    "scoreUnit": "ops/s",
+    "branch": "main",
+    "date": "20240923",
+    "commit": "b00d1b3",
+    "host": "gha"
+  },
+  {
+    "benchmark": "vecxt.benchmark.SumBenchmark.sum_vec_alt",
+    "score": 42621.98019423935,
+    "params": {
+      "len": "100000"
+    },
+    "scoreInterval": [42345.85328354004, 42898.10710493867],
+    "scoreUnit": "ops/s",
+    "branch": "main",
+    "date": "20240923",
+    "commit": "b00d1b3",
+    "host": "gha"
+  },
+  {
+    "benchmark": "vecxt.benchmark.AddScalarBenchmark.vecxt_add",
+    "score": 139271180.28241995,
+    "params": {
+      "n": "10"
+    },
+    "scoreInterval": [132556875.57415172, 145985484.99068817],
+    "scoreUnit": "ops/s",
+    "branch": "main",
+    "date": "20240918",
+    "commit": "ee74ea1",
+    "host": "gha"
+  },
+  {
+    "benchmark": "vecxt.benchmark.AddScalarBenchmark.vecxt_add",
+    "score": 11950437.734585062,
+    "params": {
+      "n": "1000"
+    },
+    "scoreInterval": [11427574.826129854, 12473300.64304027],
+    "scoreUnit": "ops/s",
+    "branch": "main",
+    "date": "20240918",
+    "commit": "ee74ea1",
+    "host": "gha"
+  },
+  {
+    "benchmark": "vecxt.benchmark.AddScalarBenchmark.vecxt_add",
+    "score": 93389.34406704002,
+    "params": {
+      "n": "100000"
+    },
+    "scoreInterval": [89358.88872650923, 97419.7994075708],
+    "scoreUnit": "ops/s",
+    "branch": "main",
+    "date": "20240918",
+    "commit": "ee74ea1",
+    "host": "gha"
+  },
+  {
+    "benchmark": "vecxt.benchmark.AddScalarBenchmark.vecxt_add_vec",
+    "score": 226672928.04083073,
+    "params": {
+      "n": "10"
+    },
+    "scoreInterval": [222034813.98882085, 231311042.0928406],
+    "scoreUnit": "ops/s",
+    "branch": "main",
+    "date": "20240918",
+    "commit": "ee74ea1",
+    "host": "gha"
+  },
+  {
+    "benchmark": "vecxt.benchmark.AddScalarBenchmark.vecxt_add_vec",
+    "score": 10687494.824314008,
+    "params": {
+      "n": "1000"
+    },
+    "scoreInterval": [10580066.929250302, 10794922.719377713],
+    "scoreUnit": "ops/s",
+    "branch": "main",
+    "date": "20240918",
+    "commit": "ee74ea1",
+    "host": "gha"
+  },
+  {
+    "benchmark": "vecxt.benchmark.AddScalarBenchmark.vecxt_add_vec",
+    "score": 69962.0635501234,
+    "params": {
+      "n": "100000"
+    },
+    "scoreInterval": [68626.63993475148, 71297.48716549533],
+    "scoreUnit": "ops/s",
+    "branch": "main",
+    "date": "20240918",
+    "commit": "ee74ea1",
+    "host": "gha"
+  },
+  {
+    "benchmark": "vecxt.benchmark.DgemmBenchmark.java_dgemm",
+    "score": 8695.833161522669,
+    "params": null,
+    "scoreInterval": [5669.514093990583, 11722.152229054755],
+    "scoreUnit": "ops/s",
+    "branch": "main",
+    "date": "20240918",
+    "commit": "ee74ea1",
+    "host": "gha"
+  },
+  {
+    "benchmark": "vecxt.benchmark.DgemmBenchmark.vecxt_mmult",
+    "score": 8915.458927368965,
+    "params": null,
+    "scoreInterval": [8541.425415824586, 9289.492438913345],
+    "scoreUnit": "ops/s",
+    "branch": "main",
+    "date": "20240918",
+    "commit": "ee74ea1",
+    "host": "gha"
+  },
+  {
+    "benchmark": "vecxt.benchmark.SumBenchmark.sum_loop",
+    "score": 454987372.51822996,
+    "params": {
+      "len": "3"
+    },
+    "scoreInterval": [450012818.3419417, 459961926.6945182],
+    "scoreUnit": "ops/s",
+    "branch": "main",
+    "date": "20240918",
+    "commit": "ee74ea1",
+    "host": "gha"
+  },
+  {
+    "benchmark": "vecxt.benchmark.SumBenchmark.sum_loop",
+    "score": 22881036.167108547,
+    "params": {
+      "len": "100"
+    },
+    "scoreInterval": [22451776.43882368, 23310295.895393413],
+    "scoreUnit": "ops/s",
+    "branch": "main",
+    "date": "20240918",
+    "commit": "ee74ea1",
+    "host": "gha"
+  },
+  {
+    "benchmark": "vecxt.benchmark.SumBenchmark.sum_loop",
+    "score": 10733.80671909106,
+    "params": {
+      "len": "100000"
+    },
+    "scoreInterval": [10668.792736435029, 10798.820701747092],
+    "scoreUnit": "ops/s",
+    "branch": "main",
+    "date": "20240918",
+    "commit": "ee74ea1",
+    "host": "gha"
+  },
+  {
+    "benchmark": "vecxt.benchmark.SumBenchmark.sum_vec",
+    "score": 454811646.6707771,
+    "params": {
+      "len": "3"
+    },
+    "scoreInterval": [442645296.7622984, 466977996.57925576],
+    "scoreUnit": "ops/s",
+    "branch": "main",
+    "date": "20240918",
+    "commit": "ee74ea1",
+    "host": "gha"
+  },
+  {
+    "benchmark": "vecxt.benchmark.SumBenchmark.sum_vec",
+    "score": 40353921.10599149,
+    "params": {
+      "len": "100"
+    },
+    "scoreInterval": [39806269.92838973, 40901572.28359325],
+    "scoreUnit": "ops/s",
+    "branch": "main",
+    "date": "20240918",
+    "commit": "ee74ea1",
+    "host": "gha"
+  },
+  {
+    "benchmark": "vecxt.benchmark.SumBenchmark.sum_vec",
+    "score": 40141.62098472344,
+    "params": {
+      "len": "100000"
+    },
+    "scoreInterval": [39426.93548183463, 40856.30648761225],
+    "scoreUnit": "ops/s",
+    "branch": "main",
+    "date": "20240918",
+    "commit": "ee74ea1",
+    "host": "gha"
+  },
+  {
+    "benchmark": "vecxt.benchmark.SumBenchmark.sum_vec_alt",
+    "score": 505591602.6431393,
+    "params": {
+      "len": "3"
+    },
+    "scoreInterval": [468908681.9808423, 542274523.3054363],
+    "scoreUnit": "ops/s",
+    "branch": "main",
+    "date": "20240918",
+    "commit": "ee74ea1",
+    "host": "gha"
+  },
+  {
+    "benchmark": "vecxt.benchmark.SumBenchmark.sum_vec_alt",
+    "score": 110847968.17268698,
+    "params": {
+      "len": "100"
+    },
+    "scoreInterval": [109484784.64933716, 112211151.6960368],
+    "scoreUnit": "ops/s",
+    "branch": "main",
+    "date": "20240918",
+    "commit": "ee74ea1",
+    "host": "gha"
+  },
+  {
+    "benchmark": "vecxt.benchmark.SumBenchmark.sum_vec_alt",
+    "score": 42821.900761641686,
+    "params": {
+      "len": "100000"
+    },
+    "scoreInterval": [42577.607618969814, 43066.19390431356],
+    "scoreUnit": "ops/s",
+    "branch": "main",
+    "date": "20240918",
+    "commit": "ee74ea1",
+    "host": "gha"
+  }
+]

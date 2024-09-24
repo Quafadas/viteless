@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>FlicFlac</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script>
+      const sse = new EventSource("/refresh/v1/sse");
+      sse.addEventListener("message", (e) => {
+        const msg = JSON.parse(e.data);
+
+        if ("KeepAlive" in msg) console.log("KeepAlive");
+
+        if ("PageRefresh" in msg) location.reload();
+      });
+    </script>
+    <script src="main.js" type="module"></script>
+  </body>
+</html>

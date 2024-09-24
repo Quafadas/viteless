@@ -2,8 +2,7 @@
 //> using platform js
 
 //> using dep org.scala-js::scalajs-dom::2.8.0
-//> using dep com.raquo::laminar::17.0.0
-//> using dep io.github.quafadas::dedav_laminar::0.9.2-1-05a8a88-20240725T191744Z-SNAPSHOT
+//> using dep io.github.quafadas::dedav_laminar::0.9.3
 
 //> using jsEmitSourceMaps true
 //> using jsModuleKind es
@@ -22,46 +21,40 @@ import viz.vega.plots.doNothing
 import viz.vega.plots.PieChartLite
 import viz.LaminarViz
 import viz.vega.facades.EmbedOptions
+import viz.PlatformGetSpec
+import viz.vega.Framework
+
+import org.scalajs.dom
+import scala.util.Random
+import org.scalajs.dom.Element
+import org.scalajs.dom.XMLHttpRequest
+import scala.scalajs.js
+import scala.scalajs.js.JSON
+import org.scalajs.dom.HTMLDivElement
 
 @main
 def main: Unit =
-  renderOnDomContentLoaded(
-    dom.document.getElementById("app"),
-    app
-  )
 
-def app =
-  val hiVar = Var("Scala JS") // Local state
-  div(
-    h1(
-      s"Hello ",
-      child.text <-- hiVar.signal
-    ),
-    p("This page should reload on change  Check the justfile... asdf  "),
-    // https://demo.laminar.dev/app/form/controlled-inputs
-    input(
-      typ := "text",
-      controlled(
-        value <-- hiVar.signal,
-        onInput.mapToValue --> hiVar.writer
-      )
-    ),
-    div(
-      width := "50vmin",
-      height := "50vmin",
-      LaminarViz.simpleEmbed(
-        PieChart(
-          List(
-            viz.Utils.fillDiv,
-            spec => spec("marks")(0)("name") = "piedy"
-          )
-        ),
-        embedOpt = Some(
-          EmbedOptions( renderer = "svg" )
-        )
-      )
-    ),
-
-    notwebapp.more
+  showJsDocs(
+    "errorBars.vg.json",
+    dom.document.getElementById("app")
 
   )
+
+object showJsDocs:
+  def apply(path: String, node: Element, width: Int = 50) =
+    val child = dom.document.createElement("div")
+    val anId = "vega" + Random.alphanumeric.take(8).mkString("")
+    child.id = anId
+    node.appendChild(child)
+    child.setAttribute("style", s"width:${width}vmin;height:${width}vmin")
+
+    val opts = viz.vega.facades.EmbedOptions()
+    val xhr = new XMLHttpRequest()
+    xhr.open("GET", s"$path", false)
+    xhr.send()
+    val text = xhr.responseText
+    val parsed = JSON.parse(text).asInstanceOf[js.Object]
+    viz.vega.facades.embed(child.asInstanceOf[HTMLDivElement], parsed, opts)
+    ()
+  end apply
