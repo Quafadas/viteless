@@ -1,6 +1,6 @@
 {
   "imports": {
-    "##vega-embed": "https://cdn.jsdelivr.net/npm/vega-embed@6.26.0/+esm",
-    "##vega-view": "https://cdn.jsdelivr.net/npm/vega-view@5.13.0/+esm"
+    "##vega-embed": "https://cdn.jsdelivr.net/npm/vega-embed@6.26.0/+esm?bundle-deps=true",
+    "##vega-view": "https://cdn.jsdelivr.net/npm/vega-view@5.13.0/+esm?bundle-deps=true"
   }
 }
