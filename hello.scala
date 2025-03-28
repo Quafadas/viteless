@@ -1,15 +1,14 @@
-//> using scala 3.4.2
+//> using scala 3.6.4
 //> using platform js
 
 //> using dep org.scala-js::scalajs-dom::2.8.0
-//> using dep io.github.quafadas::dedav_laminar::0.9.3
+//> using dep io.github.quafadas::dedav_laminar::0.9.2
 
 //> using jsEmitSourceMaps true
 //> using jsModuleKind es
 //> using jsModuleSplitStyleStr smallmodulesfor
 //> using jsSmallModuleForPackage webapp
 //> using jsEsModuleImportMap importmap.json
-
 
 package webapp
 
@@ -31,30 +30,65 @@ import org.scalajs.dom.XMLHttpRequest
 import scala.scalajs.js
 import scala.scalajs.js.JSON
 import org.scalajs.dom.HTMLDivElement
+import scala.scalajs.js.annotation.JSImport
 
 @main
 def main: Unit =
 
-  showJsDocs(
-    "errorBars.vg.json",
-    dom.document.getElementById("app")
+  dom.document.addEventListener(
+    "DOMContentLoaded",
+    { (_: dom.Event) =>
+      initializeECharts()
 
+      // child.setAttribute("style", s"width:500px;height:500px")
+
+    }
   )
 
-object showJsDocs:
-  def apply(path: String, node: Element, width: Int = 50) =
-    val child = dom.document.createElement("div")
-    val anId = "vega" + Random.alphanumeric.take(8).mkString("")
-    child.id = anId
-    node.appendChild(child)
-    child.setAttribute("style", s"width:${width}vmin;height:${width}vmin")
+def initializeECharts(): Unit =
+  val chartDiv = dom.document.createElement("div")
+  chartDiv.id = "main"
+  chartDiv.setAttribute("style", "width: 600px; height: 400px;")
+  dom.document.getElementById("app").appendChild(chartDiv)
 
-    val opts = viz.vega.facades.EmbedOptions()
-    val xhr = new XMLHttpRequest()
-    xhr.open("GET", s"$path", false)
-    xhr.send()
-    val text = xhr.responseText
-    val parsed = JSON.parse(text).asInstanceOf[js.Object]
-    viz.vega.facades.embed(child.asInstanceOf[HTMLDivElement], parsed, opts)
-    ()
-  end apply
+  val myChart = echarts.init(chartDiv)
+
+  val opt = JSON.parse("""{
+        "title": {
+          "text": "ECharts Getting Started Example"
+        },
+        "tooltip": {},
+        "width": 600,
+        "height": 400,
+        "legend": {
+          "data": ["sales"]
+        },
+        "xAxis": {
+          "data": ["Shirts", "Cardigans"]
+        },
+        "yAxis": {},
+        "series": [
+          {
+            "name": "sales",
+            "type": "bar",
+            "data": [5, 20]
+          }
+        ]
+      }""")
+
+  myChart.setOption(opt)
+
+// import * as echarts from "echarts/dist/echarts";
+@js.native
+@JSImport(
+  "https://cdn.jsdelivr.net/npm/echarts@5.6.0/dist/echarts.esm.js",
+  JSImport.Namespace
+)
+object echarts extends js.Object:
+  def init(dom: Element): EChartInstance = js.native
+  def init(dom: Element, theme: String): EChartInstance = js.native
+
+@js.native
+trait EChartInstance extends js.Object:
+  def setOption(option: js.Dynamic): Unit = js.native
+  def resize(): Unit = js.native
