@@ -53,28 +53,28 @@ def initializeECharts(): Unit =
 
   val myChart = echarts.init(chartDiv)
 
-  val opt = JSON.parse("""{
-        "title": {
-          "text": "ECharts Getting Started Example"
-        },
-        "tooltip": {},
-        "width": 600,
-        "height": 400,
-        "legend": {
-          "data": ["sales"]
-        },
-        "xAxis": {
-          "data": ["Shirts", "Cardigans"]
-        },
-        "yAxis": {},
-        "series": [
-          {
-            "name": "sales",
-            "type": "bar",
-            "data": [5, 20]
-          }
-        ]
-      }""")
+  val opt = js.Dynamic.literal(
+    title = js.Dynamic.literal(
+      text = "ECharts Getting Started Example"
+    ),
+    tooltip = js.Dynamic.literal(),
+    width = 600,
+    height = 400,
+    legend = js.Dynamic.literal(
+      data = js.Array("sales")
+    ),
+    xAxis = js.Dynamic.literal(
+      data = js.Array("Shirts", "Cardigans")
+    ),
+    yAxis = js.Dynamic.literal(),
+    series = js.Array(
+      js.Dynamic.literal(
+        name = "sales",
+        `type` = "bar",
+        data = js.Array(5, 20)
+      )
+    )
+  )
 
   myChart.setOption(opt)
 
