@@ -1,0 +1,12 @@
+extends: io.github.quafadas.sjsls.ScalaJsWebAppModule
+scalaVersion: 3.8.3
+mvnDeps:
+- com.raquo::laminar::18.0.0-M5
+- io.github.nguyenyou::webawesome-laminar::3.0.0
+smallModulesFor: [webapp]
+externalStylesheets: [
+  "custom.css",
+  "https://cdn.jsdelivr.net/npm/@awesome.me/webawesome@3.4.0/dist-cdn/styles/webawesome.css"
+]
+importMap:
+  "@awesome.me/webawesome/dist/": "https://cdn.jsdelivr.net/npm/@awesome.me/webawesome@3.4.0/dist-cdn/"

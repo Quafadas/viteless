@@ -3,3 +3,4 @@
 .scala-build
 .metals
 .DS_Store
+out/
