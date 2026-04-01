@@ -1,4 +1,4 @@
 //| mill-version: 1.1.5
 //| mill-jvm-version: 21
 //| mvnDeps:
-//| -  io.github.quafadas:sjsls_plugin_mill1_3.8:0.14.0-4-808dcf-DIRTY564ae118
+//| -  io.github.quafadas:sjsls_plugin_mill1_3.8:0.14.2

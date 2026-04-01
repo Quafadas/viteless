@@ -36,12 +36,12 @@ def app =
         onInput.mapToValue --> hiVar.writer
       )
     ),
-    p(),
+    p("does'nt make the bind a second time? "),
     ul(
       li(
         "This reloads on change to source.",
         ul(
-          li("Sources are hashed and served with `public, immutable` headers, so only the changed files are reloaded"),
+          li("Sources are hashed and served with `public, immutable` headers, so only the changed files are reloaded. Others served out of browser cache"),
           li("Mill provides a ", pre("Map[String, Array[Byte]]"), " to the linker and injects that map into the refresh server. No file I/O during fastLinkJS / refresh loop"),
         )
       ),
