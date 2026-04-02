@@ -37,19 +37,10 @@ jobs:
           node-version: 22
       - run: npm install -g terser
 
-      - name: Compile
-        run: ./mill mathlify.compile
-
-      - name: Run tests
-        run: ./mill mathlify.test
-
-      - name: Run tests
-        run: ./mill appTest
-      - run: ./mill example.assembleSite
-
+      - run: ./mill app.assembleSite
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: out/example/assembleSite.dest
+          path: out/app/assembleSite.dest
 
       - id: deployment
         uses: actions/deploy-pages@v4
