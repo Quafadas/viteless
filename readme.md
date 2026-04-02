@@ -6,7 +6,7 @@ An entirely declarative ScalaJS build.
 
 `mill -w app.serve`
 
-TThe server will pulse a refresh event the client on code change.
+TThe server will pulse a refresh event to the (browser) client on code change.
 
 ## Publish
 
