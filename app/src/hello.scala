@@ -14,13 +14,16 @@ def main: Unit =
   )
 
 def app =
-  val hiVar = Var("Simon") // Local state
+  val hiVar = Var("Laminar")
 
   div(
     cls := "page-container",
     div(
       cls := "page-header",
-      h1("Hello ", child.text <-- hiVar.signal)
+      h1(
+        "Hello ",
+        child.text <-- hiVar.signal
+      )
     ),
     p("This page should reload on change"),
     Callout(
@@ -36,7 +39,7 @@ def app =
         onInput.mapToValue --> hiVar.writer
       )
     ),
-    p("does'nt make the bind a second time? "),
+    p(),
     ul(
       li(
         "This reloads on change to source.",
@@ -45,7 +48,9 @@ def app =
           li("Mill provides a ", pre("Map[String, Array[Byte]]"), " to the linker and injects that map into the refresh server. No file I/O during fastLinkJS / refresh loop"),
         )
       ),
-      li("Source maps are configured and one click away in Chrome Devtools."),
+      li("Source maps are configured and one click away in Chrome Devtools.",
+        ul(li("So you can edit it browser!")),
+      ),
       li("Styles hot reload"),
       li("Single publish command"),
       pre(

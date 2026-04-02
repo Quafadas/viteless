@@ -1,0 +1,55 @@
+name: Build and Test
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+on:
+  push:
+    branches:
+      - 'mill'
+  workflow_dispatch:
+
+jobs:
+  test:
+    name: Scala.js / munit
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - uses: actions/checkout@v4
+
+      - uses: coursier/cache-action@v8
+
+      - name: Set up JDK 24
+        uses: actions/setup-java@v4
+        with:
+          java-version: "24"
+          distribution: temurin
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm install -g terser
+
+      - name: Compile
+        run: ./mill mathlify.compile
+
+      - name: Run tests
+        run: ./mill mathlify.test
+
+      - name: Run tests
+        run: ./mill appTest
+      - run: ./mill example.assembleSite
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: out/example/assembleSite.dest
+
+      - id: deployment
+        uses: actions/deploy-pages@v4
