@@ -1,0 +1,5 @@
+{
+  "imports": {
+    "@awesome.me/webawesome/dist/": "https://cdn.jsdelivr.net/npm/@awesome.me/webawesome@3/dist-cdn/"
+  }
+}

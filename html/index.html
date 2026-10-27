@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>viteless</title>
+
+    <!-- Web Awesome theme + base styles -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@awesome.me/webawesome@3/dist-cdn/styles/webawesome.css"
+    />
+
+  </head>
+  <body>
+    <div id="app"></div>
+
+    <!-- Live reload from sjsls -->
+    <script>
+      const sse = new EventSource("/refresh/v1/sse");
+      sse.addEventListener("message", (e) => {
+        const msg = JSON.parse(e.data);
+        if ("PageRefresh" in msg) location.reload();
+      });
+    </script>
+    <script src="main.js" type="module"></script>
+  </body>
+</html>
